@@ -712,7 +712,7 @@ int gcore_fw_event_notify(enum fw_event_type event)
             break;
         }        
     }
-    
+        /*A06 code for AL7160A-4170 by huangyin at 20241023 start*/	
         switch (event) {
         case FW_EDGE_0:
             fw_event_cmd[10] = fw_event_cmd[10] & ~((0x00 | 0x01) << 0);
@@ -829,12 +829,12 @@ int gcore_fw_event_notify(enum fw_event_type event)
             notify_byte = fw_event_cmd[10];
             GTP_DEBUG("gcore fw event:resume");
             break;
-        
+        case DRIVER_REGISTER_START:		            fw_event_cmd[7] = 0x01;			            GTP_DEBUG("gcore fw event:Driver regiser start");			            break;        case DRIVER_REGISTER_END:		            fw_event_cmd[7] = 0x00;			            GTP_DEBUG("gcore fw event:Driver regiser end");			            break;
         default:
             GTP_DEBUG("unknown fw event type.");
             break;    
         }
-    
+    /*A06 code for AL7160A-4170 by huangyin at 20241023 end*/    
 
     if (g_ret_update == 0 || gdev_fwu->ts_stat == TS_SUSPEND) {
         GTP_DEBUG("Only change event cmd! not write to fw.");
@@ -874,7 +874,7 @@ int gcore_fw_event_notify(enum fw_event_type event)
     return ret;
     
 }
-
+/*A06 code for AL7160A-4170 by huangyin at 20241023 start*/
 void gcore_modify_fw_event_cmd(enum fw_event_type event)
 {
     GTP_DEBUG("start modify event cmd");
@@ -993,16 +993,15 @@ void gcore_modify_fw_event_cmd(enum fw_event_type event)
         case FW_RESUME:
             notify_byte = fw_event_cmd[10];
             GTP_DEBUG("gcore fw event:resume");
-            break;
+            break;			       case DRIVER_REGISTER_START:	               fw_event_cmd[7] = 0x01;			            GTP_DEBUG("gcore fw event:Driver regiser start");			            break;        case DRIVER_REGISTER_END:		            fw_event_cmd[7] = 0x00;			            GTP_DEBUG("gcore fw event:Driver regiser end");			            break;
         
         default:
             GTP_DEBUG("unknown fw event type.");
             break;    
         }
-    GTP_DEBUG("modify event cmd[9]=%d,cmd[10]=%d",fw_event_cmd[9],fw_event_cmd[10]);    
-    
+    GTP_DEBUG("modify event cmd[7]=%d cmd[9]=%d,cmd[10]=%d",fw_event_cmd[7],fw_event_cmd[9],fw_event_cmd[10]);   
 }
-
+/*A06 code for AL7160A-4170 by huangyin at 20241023 end*/
 
 void gcore_resume_event_notify_work(struct work_struct *work)
 {

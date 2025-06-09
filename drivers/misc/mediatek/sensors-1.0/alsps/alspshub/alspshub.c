@@ -1086,6 +1086,7 @@ struct lcd_id_info lcd_info[] = {
     {LCD_FOURTH, "hwid:0x43"},
 };
 #endif
+/*a06 code for AL7160A-4107 by zhawei at 20240906 start*/
 #if defined(CONFIG_HQ_PROJECT_O8)
 struct lcd_id_info lcd_info[] = {
     {LCD_FIRST,  "hwid:0x30"},
@@ -1093,9 +1094,11 @@ struct lcd_id_info lcd_info[] = {
     {LCD_THIRD,  "hwid:0x50"},
     {LCD_FOURTH, "hwid:0x60"},
     {LCD_FIFTH,  "hwid:0x70"},
-    {LCD_SIXTH,  "hwid:0x80"}
+    {LCD_SIXTH,  "hwid:0x80"},
+    {LCD_SEVENTH,"hwid:0x90"}
 };
 #endif
+/*a06 code for AL7160A-4107 by zhawei at 20240906 end*/
 #if defined(CONFIG_HQ_PROJECT_O22) || defined(CONFIG_HQ_PROJECT_O8)
 static void lcd_info_judge(uint8_t *data)
 {

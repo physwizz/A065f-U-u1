@@ -50,7 +50,7 @@ struct LCM_DRIVER *o22_lcm_driver_list[] = {
 #endif
 };
 #endif
-/*A06 code for SR-AL7160A-01-775 by wenghailong at 20240422 start*/
+/* A06 code for SR-AL7160A-01-889 by huangyin at 20240828 start*/
 #if defined(CONFIG_HQ_PROJECT_O8)
 struct LCM_DRIVER *o8_lcm_driver_list[] = {
 #if defined(LCD_FT8057P_XX_CTC_MIPI_HD_VIDEO)
@@ -74,12 +74,15 @@ struct LCM_DRIVER *o8_lcm_driver_list[] = {
 #if defined(LCD_GC7272_LD_CTC_MIPI_HD_VIDEO)
         &lcd_gc7272_ld_ctc_mipi_hd_video_lcm_drv,
 #endif
+#if defined(LCD_GC7272_XX_BOE_MIPI_HD_VIDEO)
+        &lcd_gc7272_xx_boe_mipi_hd_video_lcm_drv,
+#endif
 #if defined(LCD_DEFAULT_MIPI_FHD_VIDEO)
         &lcd_default_mipi_fhd_video_lcm_drv,
 #endif
 };
 #endif
-/*A06 code for SR-AL7160A-01-775 by wenghailong at 20240422 end*/
+/* A06 code for SR-AL7160A-01-889 by huangyin at 20240828 end*/
 #if defined(CONFIG_HQ_PROJECT_HS04)
 /*hs04 code for DEAL6398A-1875 by zhawei at 20221017 start*/
 struct LCM_DRIVER *hs04_lcm_driver_list[] = {

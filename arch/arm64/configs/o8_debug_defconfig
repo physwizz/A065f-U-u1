@@ -101,9 +101,9 @@ CONFIG_CUSTOM_KERNEL_IMGSENSOR="a0601lybacks5kjn1_mipi_raw a0601ddfrontsc820cs_m
 # A06 code for SR-AL7160A-01-502 by xuyunhui at 20240619 end
 # A06 code for SR-AL7160A-01-502 by jiangwenhan at 20240626 end
 CONFIG_MTK_LCM=y
-# A06 code for SR-AL7160A-01-775 by wenghailong at 20240422 start
-CONFIG_CUSTOM_KERNEL_LCM="lcd_ft8057p_xx_ctc_mipi_hd_video lcd_hx83108b_ls_hkc_mipi_hd_video lcd_gc7272_xx_hsd_mipi_hd_video lcd_ft8057p_txd_boe_mipi_hd_video lcd_hx83108b_ls_inx_mipi_hd_video lcd_hx83108b_xx_hkc_mipi_hd_video lcd_gc7272_ld_ctc_mipi_hd_video lcd_default_mipi_fhd_video"
-# A06 code for SR-AL7160A-01-775 by wenghailong at 20240422 end
+# A06 code for SR-AL7160A-01-889 by huangyin at 20240828 start
+CONFIG_CUSTOM_KERNEL_LCM="lcd_ft8057p_xx_ctc_mipi_hd_video lcd_hx83108b_ls_hkc_mipi_hd_video lcd_gc7272_xx_hsd_mipi_hd_video lcd_ft8057p_txd_boe_mipi_hd_video lcd_hx83108b_ls_inx_mipi_hd_video lcd_hx83108b_xx_hkc_mipi_hd_video lcd_gc7272_ld_ctc_mipi_hd_video lcd_gc7272_xx_boe_mipi_hd_video lcd_default_mipi_fhd_video"
+# A06 code for SR-AL7160A-01-889 by huangyin at 20240828 end
 # hs14 code for SR-AL6528A-01-784 by fengzhigang at 20221201 start
 CONFIG_SWITCH=y
 # hs14 code for SR-AL6528A-01-784 by fengzhigang at 20221201 end

@@ -1389,6 +1389,7 @@ int gcore_probe_device(void)
 #elif defined(CONFIG_ENABLE_CHIP_TYPE_GC7272)
     u16 chip_type = 0x5050;
     u16 chip_type1 = 0x8080;
+	u16 chip_type2 = 0x9090;
 #endif
     u8 buf[2] = { 0 };
     u16 id = 0;
@@ -1400,7 +1401,7 @@ int gcore_probe_device(void)
 
         id = (buf[0] << 8) | buf[1];
 
-        if (id == chip_type || id == chip_type1) {
+       if (id == chip_type || id == chip_type1||id ==chip_type2) {
         //if ((id != 0)&&((id & 0xff)!=0xff)) {
             GTP_DEBUG("GC%04x chip id match success,chip_type=%04x",id,chip_type);
             ret = 0;
@@ -1740,6 +1741,8 @@ static int gcore_get_tp_module(void)
         fw_num = MODEL_XX_HSD;
     } else if (NULL != strstr(panel_name, "gc7272_ld_ctc")) {
         fw_num = MODEL_LD_CTC;
+	} else if (NULL != strstr(panel_name, "gc7272_xx_boe")){
+        fw_num = MODEL_XX_BOE;
     } else {
         fw_num = MODEL_DEFAULT;
     }
@@ -1769,6 +1772,12 @@ static void gcore_update_module_info(void)
             strcpy(gdev->gcore_nomalfw_rq_name, "gc7272_ld_ctc_firmware.bin");
             strcpy(gdev->gcore_mpfw_rq_name, "gc7272_ld_ctc_mpfw.bin");
             strcpy(gdev->gcore_csv_name, "gc7272_ld_ctc_mp_test.ini");
+            break;
+	 case MODEL_XX_BOE:
+            strcpy(gdev->module_name,"gc7272_xx_boe");
+            strcpy(gdev->gcore_nomalfw_rq_name, "gc7272_xx_boe_firmware.bin");
+            strcpy(gdev->gcore_mpfw_rq_name, "gc7272_xx_boe_mpfw.bin");
+            strcpy(gdev->gcore_csv_name, "gc7272_xx_boe_mp_test.ini");
             break;
     default:
             strcpy(gdev->module_name,"unknown");
@@ -1893,6 +1902,9 @@ int gcore_touch_probe(struct gcore_dev *gdev)
 #endif
 #endif
 
+	/*A06 code for AL7160A-4170 by huangyin at 20241023 start*/
+    gcore_modify_fw_event_cmd(DRIVER_REGISTER_START);
+    /*A06 code for AL7160A-4170 by huangyin at 20241023 end*/
     gcore_update_module_info();
     tp_feature_interface();
 

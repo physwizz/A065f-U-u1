@@ -35,6 +35,7 @@ enum lcd_id {
 	LCD_FOURTH,
 };
 #endif
+/*a06 code for AL7160A-4107 by zhawei at 20240906 start*/
 #if defined(CONFIG_HQ_PROJECT_O8)
 enum lcd_id {
 	LCD_NONE,
@@ -44,8 +45,10 @@ enum lcd_id {
 	LCD_FOURTH,
 	LCD_FIFTH,
 	LCD_SIXTH,
+	LCD_SEVENTH,
 };
 #endif
+/*a06 code for AL7160A-4107 by zhawei at 20240906 end*/
 #if defined(CONFIG_HQ_PROJECT_O22) || defined(CONFIG_HQ_PROJECT_O8)
 struct lcd_id_info
 {

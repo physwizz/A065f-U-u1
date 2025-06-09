@@ -6,4 +6,5 @@ obj-y += lcd_ft8057p_txd_boe_mipi_hd_video.o
 obj-y += lcd_hx83108b_ls_inx_mipi_hd_video.o
 obj-y += lcd_hx83108b_xx_hkc_mipi_hd_video.o
 obj-y += lcd_gc7272_ld_ctc_mipi_hd_video.o
+obj-y += lcd_gc7272_xx_boe_mipi_hd_video.o
 obj-y += lcd_default_mipi_fhd_video.o

@@ -225,13 +225,15 @@ enum FW_MODE {
 #endif
 extern bool smart_wakeup_open_flag;
 
-/*A06 code for SR-AL7160A-01-775 by wenghailong at 20240422 start*/
+/*A06 code for SR-AL7160A-01-895 by huangyin at 20240828 start*/
 enum GC_TS_MODEL{
     MODEL_DEFAULT = 0,
     MODEL_XX_HSD,
     MODEL_LD_CTC,
+	MODEL_XX_BOE,
 };
-/*A06 code for SR-AL7160A-01-775 by wenghailong at 20240422 end*/
+/*A06 code for SR-AL7160A-01-895 by huangyin at 20240828 end*/
+/*A06 code for AL7160A-4170 by huangyin at 20241023 start*/
 
 enum fw_event_type {
     FW_UPDATE = 0,
@@ -261,7 +263,10 @@ enum fw_event_type {
     FW_HANDSFREE_ON,
     FW_HANDSFREE_OFF,
     FW_RESUME,
+	DRIVER_REGISTER_START,
+    DRIVER_REGISTER_END,
 };
+/*A06 code for AL7160A-4170 by huangyin at 20241023 end*/
 
 enum fw_edge_event_type {
     fw_dead_zone_event = 0,

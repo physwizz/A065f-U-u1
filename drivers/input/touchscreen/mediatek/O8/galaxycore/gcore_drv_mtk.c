@@ -27,9 +27,9 @@ void gcore_suspend(void)
     //struct gcore_dev *gdev = fn_data.gdev;
 
     GTP_DEBUG("enter gcore suspend");
-    /*A06 code for AL7160A-1065 by wenghailong at 20240513 start*/
-    fn_data.gdev->driver_regiser_state = 0;
-    /*A06 code for AL7160A-1065 by wenghailong at 20240513 end*/
+    /*A06 code for AL7160A-4170 by huangyin at 20241023 start*/
+    gcore_modify_fw_event_cmd(DRIVER_REGISTER_END);
+    /*A06 code for AL7160A-4170 by huangyin at 20241023 end*/
 
 #ifdef    CONFIG_ENABLE_PROXIMITY_TP_SCREEN_OFF
     if(gcore_tpd_proximity_flag && gcore_tpd_proximity_flag_off){

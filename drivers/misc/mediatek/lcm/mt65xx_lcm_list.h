@@ -415,7 +415,7 @@ extern struct LCM_DRIVER lcd_td4375_txd_jdi_mipi_fhd_video_lcm_drv;
 extern struct LCM_DRIVER lcd_default_mipi_fhd_video_lcm_drv;
 /*hs14 code for AL6528A-20 by duanyaoming at 20220906 end*/
 #endif
-/*A06 code for SR-AL7160A-01-775 by wenghailong at 20240422 start*/
+/* A06 code for SR-AL7160A-01-889 by huangyin at 20240828 start*/
 #if defined(CONFIG_HQ_PROJECT_O8)
 extern struct LCM_DRIVER lcd_ft8057p_xx_ctc_mipi_hd_video_lcm_drv;
 extern struct LCM_DRIVER lcd_hx83108b_ls_hkc_mipi_hd_video_lcm_drv;
@@ -424,9 +424,10 @@ extern struct LCM_DRIVER lcd_ft8057p_txd_boe_mipi_hd_video_lcm_drv;
 extern struct LCM_DRIVER lcd_hx83108b_ls_inx_mipi_hd_video_lcm_drv;
 extern struct LCM_DRIVER lcd_hx83108b_xx_hkc_mipi_hd_video_lcm_drv;
 extern struct LCM_DRIVER lcd_gc7272_ld_ctc_mipi_hd_video_lcm_drv;
+extern struct LCM_DRIVER lcd_gc7272_xx_boe_mipi_hd_video_lcm_drv;
 extern struct LCM_DRIVER lcd_default_mipi_fhd_video_lcm_drv;
 #endif
-/*A06 code for SR-AL7160A-01-775 by wenghailong at 20240422 end*/
+/* A06 code for SR-AL7160A-01-889 by huangyin at 20240828 end*/
 #if defined(CONFIG_HQ_PROJECT_HS04)
 /*hs04 code for DEAL6398A-1875 by zhawei at 20221017 start*/
 extern struct LCM_DRIVER lcd_nl9911c_hlt_hkc_mipi_hdp_video_lcm_drv;
